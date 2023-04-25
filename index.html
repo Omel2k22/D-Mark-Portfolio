@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Education</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-text">
+            
+            <h1><span>Diomangay</span><br>Mark Lomuel Jr. A.</h1>
+            <p>BSCS - 2A</p>
+        </div>
+    </div>
+</div>
+
+<!----------ABOUT ME---------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>     Hello and welcome to my Web portfolio! My name is Mark Lomuel Diomangay Jr. And I am currently pursuing a Bachelor of
+                Science in Computer Science at North West Samar State University. I am also an avid learner who is in my second year of
+                college and has gained a great deal of experience and knowledge throughout my academic journey.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Basic-info')">Basic Info</p>
+                    <p class="tab-links" onclick="opentab('Contact-info')">Contact Info</p>
+                    <p class="tab-links" onclick="opentab('Family-background')">Family Background</p>
+                </div>
+                <div class="tab-contents active-tab" id="Basic-info">
+                    <ul>
+                        <li><span>Born: </span>2002</li>
+                        <li><span>Birthplace: </span>Brgy. Obrero Calbayog City</li>
+                        <li><span>Sex: </span>Male</li>
+                        <li><span>Civil Status: </span>Single</li>
+                        <li><span>Height: </span>5'6</li>
+                        <li><span>Blood Type: </span>O+</li>
+                        <li><span>Citizenship: </span>Filipino</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="Contact-info">
+                    <ul>
+                        <li><span>Barangay: </span>Payahan</li>
+                        <li><span>Street: </span>Purok 2</li>
+                        <li><span>City: </span>Calbayog City</li>
+                        <li><span>Province: </span>Samar</li>
+                        <li><span><i class="material-symbols-outlined">call:</i></span> 09286832398</li>
+                        <li><span><i class="material-symbols-outlined">mail:</i></span>  markjr.diomangay@gmail.com</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="Family-background">
+                    <ul>
+                        <li><span>Father's Surname: </span>Diomangay</li>
+                        <li><span>First Name: </span>Mark Lomuel</li>
+                        <li><span>Middle Name: </span>A.<br></li>
+                    </ul>
+
+                    <ul id="section-2">
+                        <li><span>Mother's Surname: </span>Alegado</li>
+                        <li><span>First Name: </span>Merlyn</li>
+                        <li><span>Middle Name: </span>L.<br></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------EDUCATION----------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Educational Background</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Elementary</h3>
+                    <p>Calbayog City SPED Center<br>(Graduated Year 2015)</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Junior High School<h3>
+                    <p>Calbayog City National High School<br>(Graduated Year 2019)<br>With Honors</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Senior High School</h3>
+                    <p>Calbayog Arts & Design School of Eastern Visayas<br>(Graduated Year 2021)<br>With Honors</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-4.png">
+                <div class="layer">
+                    <h3>College</h3>
+                    <p>North West Samar State University<br>(Present)</p>
+                </div>
+            </div>
+        </div>
+        <a href="#header" class="btn">Back to top</a>
+    </div>
+</div>
+
+<div class="copyright">
+    <p>Copyright © 2023. All rights reserved.</p>
+
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+    
+</body>
+</html> 
